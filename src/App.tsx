@@ -9,112 +9,144 @@ interface Placement {
     location: string;
     color: string;
     tabColor: string;
-    overview: string;
+    introduction: string;
+    employerDetails: string;
+    positionDetails: string;
     projects: string[];
     skills: string[];
-    goals: string;
+    goals: string[];
+    conclusions: string;
+    acknowledgments: string;
 }
 
 const placements: Placement[] = [
     {
         id: "placement-1",
-        company: "Meridian Analytics",
-        shortName: "MA",
-        role: "Software Developer Intern",
+        company: "DHL Express Canada",
+        shortName: "DHL",
+        role: "IT Project Support & Power Platform Development Co-op",
         term: "Summer 2026",
         location: "Brampton, ON",
         color: "#A8B58A",
         tabColor: "#8fa372",
-        overview:
+        introduction:
             "Joined the data platform team to help scale internal reporting infrastructure. Contributed to migrating a legacy ETL pipeline to a modern cloud-based solution, reducing processing time by 40%. Collaborated closely with senior engineers in bi-weekly sprint reviews and code walkthroughs.",
+        employerDetails:
+            "DHL Express Canada is a leading logistics company specializing in international shipping and courier services. The IT department focuses on building scalable internal tools and data pipelines to support global operations.",
+        positionDetails:
+            "As an IT Project Support and Power Platform Development Co-op, I was responsible for supporting and maintaining the company's internal IT systems and developing new features using Microsoft Power Platform.",
         projects: [
             "Redesigned ETL pipeline using Apache Airflow on AWS",
             "Built a real-time metrics dashboard in React with WebSocket data feeds",
             "Automated weekly report generation, saving 6+ hours of manual work per week",
         ],
         skills: ["Python", "Apache Airflow", "AWS S3", "React", "SQL", "Agile / Scrum"],
-        goals:
+
+        goals: [
             "Aimed to deepen understanding of cloud infrastructure and data engineering patterns. Grew significantly in writing production-grade Python and navigating large, unfamiliar codebases with confidence.",
+        ],
+        conclusions:
+            "This work term solidified my interest in backend and data engineering. I learned the importance of clear documentation, code reviews, and testing in maintaining a reliable data platform.",
+        acknowledgments:
+            "I would like to thank my mentor, Jane Doe, for her guidance and support throughout the term. Her insights into system design and best practices were invaluable.",
     },
     {
         id: "placement-2",
-        company: "Northlight Systems",
-        shortName: "NL",
-        role: "Full Stack Developer Intern",
+        company: "DHL Express Canada",
+        shortName: "DHL",
+        role: "IT Project Support & Power Platform Development Co-op",
         term: "Fall 2026",
         location: "Brampton, ON",
         color: "#A9B7C6",
         tabColor: "#8fa0b3",
-        overview:
+        introduction:
             "Embedded in the product engineering team building B2B SaaS tooling for logistics companies. Took ownership of two feature modules end-to-end — from database schema design through API implementation to frontend delivery. Participated in product planning sessions and user research debriefs.",
+        employerDetails:
+            "DHL Express Canada is a leading logistics company specializing in international shipping and courier services. The IT department focuses on building scalable internal tools and data pipelines to support global operations.",
+        positionDetails:
+            "As an IT Project Support and Power Platform Development Co-op, I was responsible for supporting and maintaining the company's internal IT systems and developing new features using Microsoft Power Platform.",
         projects: [
             "Developed a shipment tracking module with live map integration",
             "Implemented role-based access control across the platform API",
             "Wrote comprehensive unit and integration tests, raising code coverage from 52% to 81%",
         ],
         skills: ["TypeScript", "Node.js", "PostgreSQL", "Vue.js", "Docker", "REST APIs"],
-        goals:
-            "Wanted to experience the full product development lifecycle on a real customer-facing application. Gained hands-on exposure to system design trade-offs and the value of thorough documentation.",
+        goals: [
+            "Wanted to experience the full product development lifecycle on a real customer-facing application.", "Gained hands-on exposure to system design trade-offs and the value of thorough documentation."
+        ],
+        conclusions:
+            "This work term solidified my interest in backend and data engineering. I learned the importance of clear documentation, code reviews, and testing in maintaining a reliable data platform.",
+        acknowledgments:
+            "I would like to thank my mentor, Jane Doe, for her guidance and support throughout the term. Her insights into system design and best practices were invaluable.",
     },
     {
         id: "placement-3",
-        company: "Redwood Financial",
-        shortName: "RF",
-        role: "Software Engineering Intern",
+        company: "Coming Soon",
+        shortName: "",
+        role: "TBD",
         term: "Summer 2027",
-        location: "Calgary, AB (Remote)",
+        location: "TBD",
         color: "#B46A72",
         tabColor: "#9e5860",
-        overview:
-            "Worked within the core banking platform team on compliance and reporting tooling. Built and tested features under strict regulatory requirements, gaining exposure to fintech-specific engineering constraints including audit logging, data privacy, and zero-downtime deployments.",
-        projects: [
-            "Built configurable audit log viewer with advanced filtering and CSV export",
-            "Integrated third-party KYC verification API into the onboarding flow",
-            "Contributed to internal developer tooling documentation and onboarding guides",
-        ],
-        skills: ["Java", "Spring Boot", "Oracle DB", "Kafka", "JUnit", "CI/CD (Jenkins)"],
-        goals:
-            "Set out to understand engineering in a highly regulated environment. Learned how compliance shapes architectural decisions and developed a much stronger grasp of backend systems at scale.",
+        introduction:
+            "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
+        employerDetails:
+            "",
+        positionDetails:
+            "",
+        projects: [],
+        skills: [],
+        goals: [],
+        conclusions:
+            "",
+        acknowledgments:
+            "",
     },
     {
         id: "placement-4",
-        company: "Lumen Creative Studio",
-        shortName: "LC",
-        role: "Frontend Developer Intern",
+        company: "Coming Soon",
+        shortName: "",
+        role: "TBD",
         term: "Winter 2028",
-        location: "Vancouver, BC",
+        location: "TBD",
         color: "#e8a8b8",
         tabColor: "#c4849a",
-        overview:
-            "Joined a boutique digital agency working across client projects in e-commerce, media, and wellness. Translated high-fidelity Figma designs into polished, accessible web experiences. Collaborated daily with designers and project managers in a fast-paced, client-driven environment.",
-        projects: [
-            "Led frontend build for a wellness brand's e-commerce redesign (Shopify + custom React)",
-            "Developed an interactive editorial lookbook with scroll-driven animations",
-            "Improved Lighthouse performance scores across 3 client sites from 60s to 90+",
-        ],
-        skills: ["React", "Next.js", "Tailwind CSS", "Figma", "Shopify Liquid", "GSAP"],
-        goals:
-            "Wanted to sharpen design-to-code skills and learn to work in a creative agency environment. Came away with a much stronger eye for visual polish and a faster workflow bridging design and development.",
+        introduction:
+            "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
+        employerDetails:
+            "",
+        positionDetails:
+            "",
+        projects: [],
+        skills: [],
+        goals: [],
+        conclusions:
+            "",
+        acknowledgments:
+            "",
     },
     {
         id: "placement-5",
-        company: "Capsule Health Tech",
-        shortName: "CH",
-        role: "Mobile Developer Intern",
+        company: "Coming Soon",
+        shortName: "",
+        role: "TBD",
         term: "Summer 2028",
-        location: "Ottawa, ON",
+        location: "TBD",
         color: "#9D8CA6",
         tabColor: "#8a788f",
-        overview:
-            "Contributed to the development of a patient-facing mobile application used by over 50,000 active users. Worked on feature development, performance optimization, and accessibility improvements across iOS and Android platforms. Participated in sprint ceremonies and design critique sessions.",
-        projects: [
-            "Built a medication reminder system with local notification scheduling",
-            "Refactored navigation architecture to React Navigation v6, reducing load time by 30%",
-            "Added WCAG 2.1 AA accessibility support including screen reader labels and focus management",
-        ],
-        skills: ["React Native", "Expo", "TypeScript", "Firebase", "Accessibility (WCAG)", "Jest"],
-        goals:
-            "Aimed to gain experience in mobile development and healthcare technology. Developed deep appreciation for accessibility as a core engineering responsibility, not an afterthought.",
+        introduction:
+            "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
+        employerDetails:
+            "",
+        positionDetails:
+            "",
+        projects: [],
+        skills: [],
+        goals: [],
+        conclusions:
+            "",
+        acknowledgments:
+            "",
     },
 ];
 
@@ -165,19 +197,39 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
                     {/* Meta row */}
                     <div className="flex flex-wrap gap-x-6 gap-y-1 mt-3 mb-6 text-sm text-muted font-sans">
                         <span>📍 {placement.location}</span>
-                        <span>🗓 {placement.term}</span>
+                        <span>🗓️ {placement.term}</span>
                     </div>
 
                     {/* Divider */}
                     <hr className="border-border mb-7"/>
 
-                    {/* Overview */}
+                    {/* Introduction */}
                     <section className="mb-7">
                         <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Overview
+                            Introduction
                         </h2>
                         <p className="text-base leading-relaxed text-foreground font-sans">
-                            {placement.overview}
+                            {placement.introduction}
+                        </p>
+                    </section>
+
+                    {/* Employer Details */}
+                    <section className="mb-7">
+                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                            Employer Details
+                        </h2>
+                        <p className="text-base leading-relaxed text-foreground font-sans">
+                            {placement.employerDetails}
+                        </p>
+                    </section>
+
+                    {/* Position Details */}
+                    <section className="mb-7">
+                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                            Position Details
+                        </h2>
+                        <p className="text-base leading-relaxed text-foreground font-sans">
+                            {placement.positionDetails}
                         </p>
                     </section>
 
@@ -207,12 +259,37 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
                     </section>
 
                     {/* Goals */}
-                    <section>
+                    <section className="mb-7">
                         <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
                             Goals & Reflections
                         </h2>
-                        <p className="text-base leading-relaxed text-foreground font-serif italic">
-                            {placement.goals}
+                        <ul className="space-y-2">
+                            {placement.goals.map((p, i) => (
+                                <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
+                                    <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
+                                    <span>{p}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    {/* Conclusions */}
+                    <section className="mb-7">
+                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                            Conclusions
+                        </h2>
+                        <p className="text-base leading-relaxed text-foreground font-sans">
+                            {placement.conclusions}
+                        </p>
+                    </section>
+
+                    {/* Acknowledgments */}
+                    <section>
+                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                            Acknowledgments
+                        </h2>
+                        <p className="text-base leading-relaxed text-foreground font-sans">
+                            {placement.acknowledgments}
                         </p>
                     </section>
                 </div>
@@ -298,7 +375,7 @@ export default function App() {
                     <a href="mailto:your.email@example.com" className="hover:text-white transition-colors">
                         twymes@uoguelph.ca
                     </a>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="https://www.linkedin.com/in/taylor-wymes/" className="hover:text-white transition-colors">
                         LinkedIn ↗
                     </a>
                 </div>
