@@ -10,7 +10,6 @@ interface Placement {
     color: string;
     tabColor: string;
     introduction: string;
-    employerDetails: string;
     positionDetails: string;
     projects: string[];
     skills: string[];
@@ -30,29 +29,25 @@ const placements: Placement[] = [
         color: "#A8B58A",
         tabColor: "#8fa372",
         introduction:
-            "Joined the data platform team to help scale internal reporting infrastructure. Contributed to migrating a legacy ETL pipeline to a modern cloud-based solution, reducing processing time by 40%. Collaborated closely with senior engineers in bi-weekly sprint reviews and code walkthroughs.",
-        employerDetails:
-            "DHL Express Canada is a leading logistics company specializing in international shipping and courier services. The IT department focuses on building scalable internal tools and data pipelines to support global operations.",
+            "DHL Express is a leading global logistics company specializing in international shipping, courier services, and transportation. ",
         positionDetails:
             "As an IT Project Support and Power Platform Development Co-op, I was responsible for supporting and maintaining the company's internal IT systems and developing new features using Microsoft Power Platform.",
         projects: [
-            "Redesigned ETL pipeline using Apache Airflow on AWS",
-            "Built a real-time metrics dashboard in React with WebSocket data feeds",
-            "Automated weekly report generation, saving 6+ hours of manual work per week",
+            "",
         ],
-        skills: ["Python", "Apache Airflow", "AWS S3", "React", "SQL", "Agile / Scrum"],
+        skills: ["Python", "REST APIs", "HTTP Requests", "Microsoft Power BI", "Microsoft Power Automate", "Microsoft Sharepoint", "ETL Pipelines", "Agile / Scrum Methodologies", "Cross-functional Collaboration", "Stakeholder Presentations & Communication"],
 
         goals: [
-            "Aimed to deepen understanding of cloud infrastructure and data engineering patterns. Grew significantly in writing production-grade Python and navigating large, unfamiliar codebases with confidence.",
+            "",
         ],
         conclusions:
-            "This work term solidified my interest in backend and data engineering. I learned the importance of clear documentation, code reviews, and testing in maintaining a reliable data platform.",
+            "",
         acknowledgments:
-            "I would like to thank my mentor, Jane Doe, for her guidance and support throughout the term. Her insights into system design and best practices were invaluable.",
+            "",
     },
     {
         id: "placement-2",
-        company: "DHL Express Canada",
+        company: "DHL Express Canada - TBC",
         shortName: "DHL",
         role: "IT Project Support & Power Platform Development Co-op",
         term: "Fall 2026",
@@ -60,24 +55,16 @@ const placements: Placement[] = [
         color: "#A9B7C6",
         tabColor: "#8fa0b3",
         introduction:
-            "Embedded in the product engineering team building B2B SaaS tooling for logistics companies. Took ownership of two feature modules end-to-end — from database schema design through API implementation to frontend delivery. Participated in product planning sessions and user research debriefs.",
-        employerDetails:
-            "DHL Express Canada is a leading logistics company specializing in international shipping and courier services. The IT department focuses on building scalable internal tools and data pipelines to support global operations.",
+            "DHL Express is a leading global logistics company specializing in international shipping, courier services, and transportation.",
         positionDetails:
-            "As an IT Project Support and Power Platform Development Co-op, I was responsible for supporting and maintaining the company's internal IT systems and developing new features using Microsoft Power Platform.",
-        projects: [
-            "Developed a shipment tracking module with live map integration",
-            "Implemented role-based access control across the platform API",
-            "Wrote comprehensive unit and integration tests, raising code coverage from 52% to 81%",
-        ],
-        skills: ["TypeScript", "Node.js", "PostgreSQL", "Vue.js", "Docker", "REST APIs"],
-        goals: [
-            "Wanted to experience the full product development lifecycle on a real customer-facing application.", "Gained hands-on exposure to system design trade-offs and the value of thorough documentation."
-        ],
+            "",
+        projects: [],
+        skills: ["Python", "REST APIs", "HTTP Requests", "Microsoft Power BI", "Microsoft Power Automate", "Microsoft Sharepoint", "ETL Pipelines", "Agile / Scrum Methodologies", "Cross-functional Collaboration", "Stakeholder Presentations & Communication"],
+        goals: [],
         conclusions:
-            "This work term solidified my interest in backend and data engineering. I learned the importance of clear documentation, code reviews, and testing in maintaining a reliable data platform.",
+            "",
         acknowledgments:
-            "I would like to thank my mentor, Jane Doe, for her guidance and support throughout the term. Her insights into system design and best practices were invaluable.",
+            "",
     },
     {
         id: "placement-3",
@@ -90,8 +77,6 @@ const placements: Placement[] = [
         tabColor: "#9e5860",
         introduction:
             "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
-        employerDetails:
-            "",
         positionDetails:
             "",
         projects: [],
@@ -113,8 +98,6 @@ const placements: Placement[] = [
         tabColor: "#c4849a",
         introduction:
             "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
-        employerDetails:
-            "",
         positionDetails:
             "",
         projects: [],
@@ -136,8 +119,6 @@ const placements: Placement[] = [
         tabColor: "#8a788f",
         introduction:
             "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
-        employerDetails:
-            "",
         positionDetails:
             "",
         projects: [],
@@ -213,16 +194,6 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
                         </p>
                     </section>
 
-                    {/* Employer Details */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Employer Details
-                        </h2>
-                        <p className="text-base leading-relaxed text-foreground font-sans">
-                            {placement.employerDetails}
-                        </p>
-                    </section>
-
                     {/* Position Details */}
                     <section className="mb-7">
                         <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
@@ -251,7 +222,7 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
                     {/* Skills */}
                     <section className="mb-7">
                         <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Skills Developed
+                            Skills & Technologies
                         </h2>
                         <div className="flex flex-wrap gap-2">
                             {placement.skills.map((s, i) => ( <SkillPill key={i} label={s} />))}
@@ -388,6 +359,14 @@ export default function App() {
                     <p className="text-xs tracking-widest uppercase mb-2 text-muted font-sans">
                         Co-op Portfolio
                     </p>
+                    <h2 className="text-4xl sm:text-5xl font-semibold font-serif text-foreground">
+                        Welcome
+                    </h2>
+                    <p className="mb-10 mt-3 text-base text-muted font-sans">
+                        Welcome to my co-op portfolio. This website is designed to give you an inside look into my progression as a software engineer & developer. 
+                        Whether I am architecting backend data pipelines or refining accessible user interfaces, I hope you walk away from these reports with a clear sense of my technical adaptability, my problem-solving approach, and the tangible impact I strive to bring to every development team I join.
+                    </p>
+
                     <h2 className="text-4xl sm:text-5xl font-semibold font-serif text-foreground">
                         Work Terms
                     </h2>
