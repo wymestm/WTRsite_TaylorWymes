@@ -9,6 +9,7 @@ interface Placement {
     location: string;
     color: string;
     tabColor: string;
+    bannerImage: string;
     introduction: string;
     positionDetails: string;
     projects: string[];
@@ -17,6 +18,7 @@ interface Placement {
     reflections: string[];
     conclusions: string;
     acknowledgments: string;
+    gallery: string[];
 }
 
 const placements: Placement[] = [
@@ -29,6 +31,7 @@ const placements: Placement[] = [
         location: "Brampton, ON",
         color: "#A8B58A",
         tabColor: "#8fa372",
+        bannerImage: "./assets/DHL-banner.jpg",
         introduction:
             "DHL is a global logistics leader operating in over 220 countries and territories with a workforce of over 580,000 employees. \
             Within this network is DHL Express, a specialized premium subdivision focused on time-sensitive, international shipping. \
@@ -61,6 +64,12 @@ const placements: Placement[] = [
             "I would like to thank my former co-op advisor Anne-Marie Zawadski for her guidance and support throughout the co-op job search and interview preparation process. If it were not for her support, I would not have been able to secure this position at DHL Express Canada. \
             I would also like to thank my supervisor and mentor, Marco Eli Fernandez Felix, for his guidance and support throughout my work term. His mentorship has been invaluable in helping me develop my skills and grow as a software engineer.\
             Finally, I would like to thank my colleagues and teammates at DHL Express Canada for their support and collaboration throughout my work term. Their expertise and willingness to share knowledge has been instrumental in my growth and development as a software engineer.",
+        gallery: [
+            "./assets/DHL-Bathroom.jpeg",
+            "./assets/Robot-Creation.jpeg",
+            "./assets/Appreciation-Day.jpeg",
+            "./assets/IT-Gift.JPG"
+        ]
     },
     {
         id: "placement-2",
@@ -71,6 +80,7 @@ const placements: Placement[] = [
         location: "Brampton, ON",
         color: "#A9B7C6",
         tabColor: "#8fa0b3",
+        bannerImage: "./assets/DHL-banner.jpg",
         introduction:
             "DHL is a global logistics leader operating in over 220 countries and territories with a workforce of over 580,000 employees. \
             Within this network is DHL Express, a specialized premium subdivision focused on time-sensitive, international shipping. \
@@ -87,16 +97,18 @@ const placements: Placement[] = [
             "",
         acknowledgments:
             "",
+        gallery: []
     },
     {
         id: "placement-3",
         company: "Coming Soon",
         shortName: "",
-        role: "TBD",
+        role: "",
         term: "Summer 2027",
-        location: "TBD",
+        location: "",
         color: "#B46A72",
         tabColor: "#9e5860",
+        bannerImage: "",
         introduction:
             "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
         positionDetails:
@@ -109,16 +121,18 @@ const placements: Placement[] = [
             "",
         acknowledgments:
             "",
+        gallery: []
     },
     {
         id: "placement-4",
         company: "Coming Soon",
         shortName: "",
-        role: "TBD",
+        role: "",
         term: "Winter 2028",
-        location: "TBD",
+        location: "",
         color: "#e8a8b8",
         tabColor: "#c4849a",
+        bannerImage: "",
         introduction:
             "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
         positionDetails:
@@ -131,16 +145,18 @@ const placements: Placement[] = [
             "",
         acknowledgments:
             "",
+        gallery: []
     },
     {
         id: "placement-5",
         company: "Coming Soon",
         shortName: "",
-        role: "TBD",
+        role: "",
         term: "Summer 2028",
-        location: "TBD",
+        location: "",
         color: "#9D8CA6",
         tabColor: "#8a788f",
+        bannerImage: "",
         introduction:
             "Coming soon! This work term has yet to be completed. Stay tuned for updates on my experience and projects during this placement.",
         positionDetails:
@@ -153,6 +169,7 @@ const placements: Placement[] = [
             "",
         acknowledgments:
             "",
+        gallery: []
     },
 ];
 
@@ -172,7 +189,7 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
             className="doc-scrim fixed inset-0 z-50 flex items-start justify-center overflow-y-auto py-8 px-4 bg-black/70"
             onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
         >
-            <div className="doc-paper relative w-full max-w-2xl rounded-sm bg-[#FDFAF3] shadow-[0_8px_40px_#00000047,0_2px_8px_#0000001f] -rotate-[0.3deg] mb-8">
+            <div className="doc-paper relative w-full max-w-2xl rounded-sm bg-[#FDFAF3] shadow-[0_8px_40px_#00000047,0_2px_8px_#0000001f] mb-8">
                 {/* Folder top tab */}
                 <div className="h-3 rounded-t-sm w-full" style={{ backgroundColor: placement.color }}/>
 
@@ -195,19 +212,33 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
                         <h1 className="text-3xl sm:text-4xl font-semibold leading-tight mb-1 font-serif text-foreground">
                             {placement.company}
                         </h1>
-                        <p className="text-lg text-muted font-sans">
-                            {placement.role}
-                        </p>
+                        {placement.role && (
+                            <p className="text-lg text-muted font-sans">
+                                {placement.role}
+                            </p>
+                        )}
                     </div>
 
                     {/* Meta row */}
                     <div className="flex flex-wrap gap-x-6 gap-y-1 mt-3 mb-6 text-sm text-muted font-sans">
-                        <span>📍 {placement.location}</span>
+                        {placement.location && (<span>📍 {placement.location}</span>)}
                         <span>🗓️ {placement.term}</span>
                     </div>
 
                     {/* Divider */}
                     <hr className="border-border mb-7"/>
+
+                    {/* Banner Image */}
+                    {placement.bannerImage && (
+                        <div className="mb-8 w-full rounded-none overflow-hidden shadow-sm border border-foreground/10">
+                            <img 
+                                src= {placement.bannerImage}
+                                alt="Banner Image"
+                                className="w-full h-auto"
+                            />
+                        </div>
+                    )}
+                    
 
                     {/* Introduction */}
                     <section className="mb-7">
@@ -220,89 +251,124 @@ function DocumentView({ placement, onClose }: { placement: Placement; onClose: (
                     </section>
 
                     {/* Position Details */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Position Details
-                        </h2>
-                        <p className="text-base leading-relaxed text-foreground font-sans">
-                            {placement.positionDetails}
-                        </p>
-                    </section>
+                    {placement.positionDetails && (
+                        <section className="mb-7">
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Position Details
+                            </h2>
+                            <p className="text-base leading-relaxed text-foreground font-sans">
+                                {placement.positionDetails}
+                            </p>
+                        </section>
+                    )}
 
                     {/* Projects */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Key Projects
-                        </h2>
-                        <ul className="space-y-2">
-                            {placement.projects.map((p, i) => (
-                                <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
-                                    <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
-                                    <span>{p}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
+                    {placement.projects && placement.projects.length > 0 &&(
+                        <section className="mb-7">
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Key Projects
+                            </h2>
+                            <ul className="space-y-2">
+                                {placement.projects.map((p, i) => (
+                                    <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
+                                        <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
+                                        <span>{p}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
 
                     {/* Skills */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Skills & Technologies
-                        </h2>
-                        <div className="flex flex-wrap gap-2">
-                            {placement.skills.map((s, i) => ( <SkillPill key={i} label={s} />))}
-                        </div>
-                    </section>
+                    {placement.skills && placement.skills.length > 0 &&(
+                        <section className="mb-7">
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Skills & Technologies
+                            </h2>
+                            <div className="flex flex-wrap gap-2">
+                                {placement.skills.map((s, i) => ( <SkillPill key={i} label={s} />))}
+                            </div>
+                        </section>
+                    )}
 
                     {/* Goals */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Goals
-                        </h2>
-                        <ul className="space-y-2">
-                            {placement.goals.map((p, i) => (
-                                <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
-                                    <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
-                                    <span>{p}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
+                    {placement.goals && placement.goals.length > 0 && (
+                        <section className="mb-7">
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Goals
+                            </h2>
+                            <ul className="space-y-2">
+                                {placement.goals.map((p, i) => (
+                                    <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
+                                        <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
+                                        <span>{p}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
 
                     {/* Reflections */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Reflections
-                        </h2>
-                        <ul className="space-y-2">
-                            {placement.reflections.map((p, i) => (
-                                <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
-                                    <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
-                                    <span>{p}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
+                    {placement.reflections && placement.reflections.length > 0 && (
+                        <section className="mb-7">
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Reflections
+                            </h2>
+                            <ul className="space-y-2">
+                                {placement.reflections.map((p, i) => (
+                                    <li key={i} className="flex gap-3 text-base leading-snug text-foreground font-sans">
+                                        <span className="shrink-0 mt-[2px]" style={{ color: placement.tabColor }}>▸</span>
+                                        <span>{p}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
 
                     {/* Conclusions */}
-                    <section className="mb-7">
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Conclusions
-                        </h2>
-                        <p className="text-base leading-relaxed text-foreground font-sans">
-                            {placement.conclusions}
-                        </p>
-                    </section>
+                    {placement.conclusions && (
+                        <section className="mb-7">
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Conclusions
+                            </h2>
+                            <p className="text-base leading-relaxed text-foreground font-sans">
+                                {placement.conclusions}
+                            </p>
+                        </section>
+                    )}
 
                     {/* Acknowledgments */}
-                    <section>
-                        <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
-                            Acknowledgments
-                        </h2>
-                        <p className="text-base leading-relaxed text-foreground font-sans">
-                            {placement.acknowledgments}
-                        </p>
-                    </section>
+                    {placement.acknowledgments && (
+                        <section>
+                            <h2 className="text-xs tracking-widest uppercase mb-3 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Acknowledgments
+                            </h2>
+                            <p className="text-base leading-relaxed text-foreground font-sans">
+                                {placement.acknowledgments}
+                            </p>
+                        </section>
+                    )}
+
+                    {/* Image Gallery */}
+                    {placement.gallery && placement.gallery.length > 0 && (
+                        <section className="mt-12 pt-8 border-t border-foreground/10">
+                            <h2 className="text-xs tracking-widest uppercase mb-6 font-sans font-semibold" style={{ color: placement.tabColor }}>
+                                Gallery
+                            </h2>
+                            {/* Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                {placement.gallery.map((link, i) => (
+                                    <div key={i} className="rounded-xl overflow-hidden shadow-sm border border-foreground/10 aspect-square relative transition-all duration-300 hover:scale-105 hover:shadow-md">
+                                        <img 
+                                            src={link}
+                                            alt={`Gallery Snapshot ${i + 1}`} 
+                                            className="w-full h-full object-cover" 
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
                 </div>
             </div>
         </div>
@@ -389,24 +455,38 @@ export default function App() {
                     <a href="https://www.linkedin.com/in/taylor-wymes/" className="hover:text-white transition-colors">
                         LinkedIn ↗
                     </a>
+                    <a href="https://github.com/wymestm" className="hover:text-white transition-colors">
+                        Github ↗
+                    </a>
                 </div>
             </header>
 
             {/* Main content */}
             <main className="flex-1 w-full max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-14">
-                {/* Section heading */}
-                <div className="mb-10">
-                    <p className="text-xs tracking-widest uppercase mb-2 text-muted font-sans">
-                        Co-op Portfolio
-                    </p>
-                    <h2 className="text-4xl sm:text-5xl font-semibold font-serif text-foreground">
-                        Welcome
-                    </h2>
-                    <p className="mb-10 mt-3 text-base text-muted font-sans">
-                        Welcome to my co-op portfolio. This website is designed to give you an inside look into my progression as a software engineer & developer. 
-                        Whether I am architecting backend data pipelines or refining accessible user interfaces, I hope you walk away from these reports with a clear sense of my technical adaptability, my problem-solving approach, and the tangible impact I strive to bring to every development team I join.
-                    </p>
+                {/* Introduction section */}
+                <div className="mb-10 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                    {/* Headshot */}
+                    <div className="shrink-0">
+                        <img src="./assets/Headshot-TaylorW.jpeg" alt="Taylor Wymes Headshot" 
+                            className="w-40 h-52 md:w-56 md:h-72 rounded-xl object-cover shadow-sm border border-foreground/10"
+                        />
+                    </div>
+                    <div>
+                        <p className="text-xs tracking-widest uppercase mb-2 text-muted font-sans">
+                            Co-op Portfolio
+                        </p>
+                        <h2 className="text-4xl sm:text-5xl font-semibold font-serif text-foreground">
+                            Welcome
+                        </h2>
+                        <p className="mt-3 text-base text-muted font-sans">
+                            Welcome to my co-op portfolio. This website is designed to give you an inside look into my progression as a software engineer & developer. 
+                            Whether I am architecting backend data pipelines or refining accessible user interfaces, I hope you walk away from these reports with a clear sense of my technical adaptability, my problem-solving approach, and the tangible impact I strive to bring to every development team I join.
+                        </p>
+                    </div>
+                </div>
 
+                {/* Work Terms section */}
+                <div className="mb-10">
                     <h2 className="text-4xl sm:text-5xl font-semibold font-serif text-foreground">
                         Work Terms
                     </h2>
