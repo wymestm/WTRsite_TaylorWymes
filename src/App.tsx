@@ -44,8 +44,8 @@ const placements: Placement[] = [
             I was able to build upon my existing knowledge of Python and REST APIs while rapidly picking up new skills and technologies, such as Microsoft Power BI and Microsoft Power Automate, on the job. \
             Beyond technical growth, navigating this corporate environment significantly strengthened my professional soft skills, particularly in cross-functional collaboration, stakeholder communication and agile project management.",
         projects: [
-            "CBSA Manifest Management System: Developed a Python-based system to automate the generation and management of international shipment manifests to be transmitted to CBSA for verification. This system integrated DHL's manifest files, CBSA's manifest system and external APIs to streamline the manifest management process, reducing manual effort, and improving accuracy. Development is currently still ongoing, and will be continued in the remainder of my placement.",
-            "EDIFACT Translation System: Developed a Python-based system to automate the translation of EDIFACT files into a pipe-separated formats for internal use. This system was developed in the effort to replace reliance on an external 3rd party company for translation services.",
+            "CBSA Manifest Management System: Developed a Python-based system to automate the generation and management of international shipment manifests for CBSA verification. This solution integrates DHL's internal records, the CBSA system, and external APIs to streamline workflows, significantly reducing manual effort and improving data accuracy. Development of this project is actively ongoing and will continue in the remainder of my placement.",
+            "EDIFACT Translation System: Developed a Python script to automate the translation of EDIFACT files into a pipe-separated format for internal use. This tool was created to bring data-translation processes in-house and reduce reliance on third-party service providers.",
         ],
         skills: ["Python", "REST APIs", "HTTP Requests", "Microsoft Power BI", "Microsoft Power Automate", "Microsoft Sharepoint", "ETL Pipelines", "Agile / Scrum Methodologies", "Cross-functional Collaboration", "Stakeholder Presentations & Communication"],
         goals: [
@@ -59,11 +59,14 @@ const placements: Placement[] = [
             "III: I feel as though I have reached my goal and achieved an intermediate level of proficiency in Python development. Throughout the past 4 months at DHL I have worked on a variety of Python projects in which I honed my ability to develop comfortably and independently. I had the chance to work with numerous new libraries and APIs during my development, increasing my development skillset and ability to create a wide range of programs. I have also reduced the frequency in which I need to research elements of python programming such as functions and logic methods.",
         ],
         conclusions:
-            "",
+            "My first work term at DHL Express Canada has been an incredibly rewarding experience that has allowed me to grow both technically and professionally while bridging the gap between my academic studies and real-world software engineering.\
+            By working on projects such as the EDIFACT Translation System and CBSA Manifest Management System, I was able to leverage python to solve complex logistical challenges and automate workflows that directly impact the efficiency of DHL's operations.\
+            Beyond technical growth, this role has taught me how to effectively navigate a corporate environment and collaborate with cross-functional teams on a large scale. I am grateful for the opportunity to work alongside talented professionals at DHL Express Canada and contribute to the company's mission of providing fast and reliable shipping solutions worldwide. \
+            I look forward to continuing my work term in the next 4 monthsand further developing my skills and knowledge in the field of software engineering.",
         acknowledgments:
-            "I would like to thank my former co-op advisor Anne-Marie Zawadski for her guidance and support throughout the co-op job search and interview preparation process. If it were not for her support, I would not have been able to secure this position at DHL Express Canada. \
-            I would also like to thank my supervisor and mentor, Marco Eli Fernandez Felix, for his guidance and support throughout my work term. His mentorship has been invaluable in helping me develop my skills and grow as a software engineer.\
-            Finally, I would like to thank my colleagues and teammates at DHL Express Canada for their support and collaboration throughout my work term. Their expertise and willingness to share knowledge has been instrumental in my growth and development as a software engineer.",
+            "I would like to thank my former co-op advisor, Anne-Marie Zawadski, for her invaluable guidance during the job search and interview process. Anne-Marie's support was instrumental in helping me secure this position at DHL Express Canada. \
+            I am also deeply grateful to my supervisor and mentor, Marco Eli Fernandez Felix. His mentorship has been essential to my technical development and overall growth as a software engineer.\
+            Finally, a special thank you to my colleagues on the IT Programs team at DHL Express Canada. Their expertise, collaboration, and willingness to share knowledge made this work term an incredibly rewarding experience.",
         gallery: [
             "./assets/DHL-Bathroom.jpeg",
             "./assets/Robot-Creation.jpeg",
